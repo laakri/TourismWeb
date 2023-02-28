@@ -1,0 +1,31 @@
+.example-spacer {
+    flex: 1 1 auto;
+  } 
+  mat-toolbar{
+    height: 110px;
+    background-color: transparent;
+    color: var(--whitecolor);
+    justify-content: space-around;
+    z-index: 100;
+
+  }
+ 
+.left {
+    cursor: pointer;
+    display: flex;  
+    align-items: center;
+}
+.left span{
+    font-size: 28px;
+}
+.left img{
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+ 

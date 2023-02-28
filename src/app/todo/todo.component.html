@@ -1,0 +1,102 @@
+<div class="all"></div>
+
+<div class="content">
+  <div class="slides-content">
+    <div class="slides-text">
+      <h1>Camping in Ain Draham</h1>
+      <span>
+        So, if you're looking for a memorable and exciting camping experience,
+        head to Ain Draham and discover the natural beauty and charm of this
+        Tunisian town.
+      </span>
+    </div>
+    <!--------------------------------------------------------------------------------------->
+
+    <div class="slick-carousel-content">
+      <div class="slick-carousel-content-size">
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div ngxSlickItem *ngFor="let slide of slidescamping" class="slide">
+            <img
+              src="{{ slide.img }}"
+              alt="dfaz"
+              width="250px;"
+              height="300px;"
+            />
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------------->
+  </div>
+  <div class="slides-content">
+    <div class="slides-text">
+      <h1>Skiing in Ain Draham</h1>
+      <span>
+        If you're looking for an exciting skiing experience in Tunisia, head to
+        Ain Draham and discover the natural beauty and charm of this Tunisian
+        town. With its stunning mountainous terrain and snowy slopes, Ain Draham
+        is the perfect destination for ski enthusiasts. So, gear up and hit the
+        slopes for a memorable skiing adventure in Ain Draham.
+      </span>
+    </div>
+    <!--------------------------------------------------------------------------------------->
+
+    <div class="slick-carousel-content">
+      <div class="slick-carousel-content-size">
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div ngxSlickItem *ngFor="let slide of slidesskiing" class="slide">
+            <img
+              src="{{ slide.img }}"
+              alt="dfaz"
+              width="250px;"
+              height="300px;"
+            />
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------------->
+  </div>
+  <div class="slides-content">
+    <div class="slides-text">
+      <h1>Mountain Biking in Ain Draham</h1>
+      <span>
+        If you're looking for an adventurous and thrilling experience, head to
+        Ain Draham in Tunisia and discover the beautiful and rugged terrain on a
+        mountain biking excursion.
+      </span>
+    </div>
+    <!--------------------------------------------------------------------------------------->
+
+    <div class="slick-carousel-content">
+      <div class="slick-carousel-content-size">
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div ngxSlickItem *ngFor="let slide of slidesbiking" class="slide">
+            <img
+              src="{{ slide.img }}"
+              alt="dfaz"
+              width="250px;"
+              height="300px;"
+            />
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------------->
+  </div>
+</div>

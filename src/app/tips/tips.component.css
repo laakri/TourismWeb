@@ -1,0 +1,54 @@
+.all{
+    background-color: var(--darkcolor);
+    position: relative;
+    top: -110px;
+    height: 110px;
+    z-index: -1;
+}
+
+.content{
+    max-width:1240px ;
+    min-height: 120px;
+    margin:  auto;
+    color: var(--darkcolor);
+
+}
+.slides-text {
+    font-weight: 500;
+    margin: auto auto 40px auto;
+    }
+    
+    .slides-text h1 {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom:30px ;
+    }
+    
+    .slides-text .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    }
+    
+    .slides-text .flag {
+    width: 42px;
+    height: 32px;
+    margin-left: auto;
+    }
+    
+    .slides-text .tip {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    }
+    
+    .slides-text .tip .icon {
+    margin-right: 16px;
+    }
+    
+    .slides-text h3 {
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--graycolor);}

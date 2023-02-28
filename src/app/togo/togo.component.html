@@ -1,0 +1,25 @@
+<div class="all"></div>
+<div class="content">
+  <div class="text-section">
+    <h1>Go Somewhere</h1>
+    <span>Let's go on an adventure </span>
+  </div>
+  <div class="place-section">
+    <div class="card" *ngFor="let hotel of hotels">
+      <img src="{{ hotel.img }}" alt="" />
+      <div class="card-text">
+        <span>{{ hotel.name }}</span>
+        <div class="start">
+          <span>{{ hotel.stars }}</span>
+          <i class="material-icons">star</i>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+
+      <div class="card-stat">
+        <span>Tarif le plus bas</span>
+        <span>{{ hotel.prix }} </span>
+      </div>
+    </div>
+  </div>
+</div>
