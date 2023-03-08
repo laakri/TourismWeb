@@ -47,6 +47,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FooterComponent } from './footer/footer.component';
 
 /* ********************************************* */
 
@@ -58,6 +59,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     TogoComponent,
     TodoComponent,
     TipsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
