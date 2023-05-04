@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-togo',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./togo.component.css'],
 })
 export class TogoComponent {
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {}
+
   hotels = [
     {
       img: 'https://content.r9cdn.net/rimg/himg/c8/ab/7e/expediav2-203819-5cb340-879926.jpg?width=452&height=400&xhint=480&yhint=333&crop=true&watermarkheight=28&watermarkpadding=10',

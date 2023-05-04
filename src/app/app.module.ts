@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { TogoComponent } from './togo/togo.component';
 import { TodoComponent } from './todo/todo.component';
 import { TipsComponent } from './tips/tips.component';
+import { SignUpComponent } from './login/sign-up/sign-up.component';
+import { SignInComponent } from './login/sign-in/sign-in.component';
+import { LoginComponent } from './login/login.component';
 
 /* *******************MODELS******************** */
 
@@ -60,6 +63,9 @@ import { FooterComponent } from './footer/footer.component';
     TodoComponent,
     TipsComponent,
     FooterComponent,
+    SignUpComponent,
+    SignInComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

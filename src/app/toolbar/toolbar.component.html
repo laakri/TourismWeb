@@ -17,11 +17,23 @@
       <mat-icon>search_outline</mat-icon>
     </button>
     <button
+      *ngIf="!getIsAuth"
       mat-icon-button
       class="example-icon favorite-icon"
       aria-label="Example icon-button with heart icon"
+      (click)="login()"
     >
-      <mat-icon>favorite_outline</mat-icon>
+      <mat-icon>person</mat-icon>
+    </button>
+
+    <button
+      *ngIf="getIsAuth"
+      mat-icon-button
+      style="color: rgb(219, 86, 86)"
+      class="example-icon favorite-icon"
+      (click)="logout()"
+    >
+      <mat-icon>logout</mat-icon>
     </button>
   </div>
 </mat-toolbar>
