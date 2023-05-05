@@ -5,22 +5,49 @@
 
     <span>Let's go on an adventure </span>
   </div>
+
+  <div class="filter-section">
+    <span>Filter By Price</span>
+
+    <mat-slider min="1" max="1000" step="1" discrete color="warn">
+      <input
+        [(ngModel)]="minPrice"
+        (input)="getFilteredLocations()"
+        matSliderStartThumb
+      />
+      <input
+        [(ngModel)]="maxPrice"
+        (input)="getFilteredLocations()"
+        matSliderEndThumb
+      />
+    </mat-slider>
+  </div>
+
   <div class="place-section">
-    <div class="card" *ngFor="let hotel of hotels">
-      <img src="{{ hotel.img }}" alt="" />
+    <div class="card" *ngFor="let location of locations">
+      <img [src]="location.image" alt="" />
       <div class="card-text">
-        <span>{{ hotel.name }}</span>
+        <span class="card-text-span">{{ location.name }}</span>
         <div class="start">
-          <span>{{ hotel.stars }}</span>
+          <span>{{ location.stars }}</span>
           <i class="material-icons">star</i>
         </div>
+        <span>{{ location.description }}</span>
       </div>
       <mat-divider></mat-divider>
 
       <div class="card-stat">
         <span>Tarif le plus bas</span>
-        <span>{{ hotel.prix }} </span>
+        <span>{{ location.price }}Dt </span>
       </div>
+
+      <button
+        mat-button
+        class="btn"
+        (click)="openDialog(location.id, location.image)"
+      >
+        Check
+      </button>
     </div>
   </div>
 </div>

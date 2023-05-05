@@ -1,0 +1,39 @@
+mat-card {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    box-shadow: none;
+  }
+  
+  mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    margin: 10px auto;
+    width: 100%;
+  }
+  
+  mat-form-field > input,
+  mat-form-field > textarea {
+    width: 100%;
+  }
+  
+  mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+    border-color: black;
+  }
+  
+  mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    border-width: 2px;
+  }
+  
+  mat-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  

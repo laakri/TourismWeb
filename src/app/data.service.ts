@@ -8,6 +8,7 @@ import { Subject } from 'rxjs';
 export class DataService {
   private apiUrl = 'http://localhost/signup.php';
   private apiUrlIN = 'http://localhost/signin.php';
+  private emailUrl = 'http://localhost/email.php';
 
   private isAuthenticated = false;
   private authStatusListener = new Subject<boolean>();
@@ -70,5 +71,32 @@ export class DataService {
     this.isAuthenticated = false;
     this.authStatusListener.next(false);
     console.log('Logout runs seccesfully!');
+  }
+
+  getLocation(minPrice?: number, maxPrice?: number) {
+    let url = 'http://localhost/location.php';
+    if (minPrice && maxPrice) {
+      url += ` ?minPrice=${minPrice}&maxPrice=${maxPrice}`;
+    }
+    return this.http.get(url);
+  }
+
+  sendEmail(
+    name: string,
+    email: string,
+    startDate: string,
+    endDate: string,
+    requests: string
+  ) {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const body = {
+      name: name,
+      email: email,
+      startDate: startDate,
+      endDate: endDate,
+      requests: requests,
+    };
+    console.log(body);
+    return this.http.post(this.emailUrl, body, { headers: headers });
   }
 }

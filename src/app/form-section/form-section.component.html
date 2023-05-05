@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-card-title>Booking Form</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+        <mat-error *ngIf="bookingForm.controls['name'].invalid"
+          >Please enter your name</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Contact Information</mat-label>
+        <input matInput formControlName="contact" required />
+        <mat-error *ngIf="bookingForm.controls['contact'].invalid"
+          >Please enter your contact information</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Date Range</mat-label>
+        <mat-date-range-input
+          [formGroup]="dateRange"
+          [rangePicker]="picker"
+          (dateChange)="onDateRangeSelected()"
+        >
+          <input
+            matStartDate
+            formControlName="startDate"
+            placeholder="Start date"
+          />
+          <input matEndDate formControlName="endDate" placeholder="End date" />
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+        <mat-error
+          *ngIf="
+            bookingForm.controls['startDate'].invalid ||
+            bookingForm.controls['endDate'].invalid
+          "
+          >Please select a valid date range</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Special Requests</mat-label>
+        <textarea matInput formControlName="requests"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </mat-card-content>
+</mat-card>

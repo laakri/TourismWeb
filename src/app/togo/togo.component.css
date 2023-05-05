@@ -17,6 +17,7 @@
     width: 500px;
     height: 100px;
     margin: auto 10px;
+    margin-top: -50px;
 
 }
 
@@ -38,7 +39,7 @@
     margin: 10px;
     border-radius: 10px;
     width: 280px;
-    min-height: 380px;
+    height: 400px;
     background-color: var(--soft-darkcolor);
 }
 
@@ -62,17 +63,27 @@
     font-size: 20px;
     line-height: 1.2;
 }
+.card-text-span{
+    width: 200px;
+
+}
 .start{
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 16px !important;
+    gap: 2px;
 }
 .start >*{
     font-size: 16px !important;
+    color: var(--goldcolor);
+
+}
+
+.start i{
+    margin-top: -2px;
+    font-size: 20px !important;
 }
 .card-stat{
     margin: 10px 20px;
@@ -89,3 +100,57 @@
     font-size: 16px;
 
 }
+
+.filter-section{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+.card {
+    position: relative;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  }
+  
+  .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover .btn {
+    opacity: 1;
+  }
+  
+  .card-text,
+  .card-stat {
+    position: relative;
+    z-index: 2;
+  }
+  

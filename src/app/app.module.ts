@@ -51,6 +51,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FooterComponent } from './footer/footer.component';
+import { LocationDetailComponent } from './location-detail/location-detail.component';
+import { FormSectionComponent } from './form-section/form-section.component';
 
 /* ********************************************* */
 
@@ -66,6 +68,8 @@ import { FooterComponent } from './footer/footer.component';
     SignUpComponent,
     SignInComponent,
     LoginComponent,
+    LocationDetailComponent,
+    FormSectionComponent,
   ],
   imports: [
     BrowserModule,
